@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class CollisionHandler : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] GameObject destroyedVFX;
     private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("Collision detected with " + other.gameObject.name);
+            Instantiate(destroyedVFX, transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
         }
 }
