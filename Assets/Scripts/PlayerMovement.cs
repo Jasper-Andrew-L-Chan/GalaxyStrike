@@ -8,9 +8,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float controllPitchFactor = 20f;
     [SerializeField] float controllRollFactor = 20f;
     [SerializeField] float rotaionSpeed = 10f;
-
-
+    
     Vector2 movement;
+
+
+
     void Update()
     {
         ProcessTranslation();
